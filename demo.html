@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding Status Chart</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<div id="chart" style="width: 100%; height: 100vh;"></div>
+<script>
+var data = [{
+x: ['FAILED', 'SUCCESSFUL'],
+y: [2, 3],
+type: 'bar',
+marker: {
+color: ['red', 'green']
+}
+}];
+
+var layout = {
+title: 'Onboarding Status Summary',
+xaxis: {
+title: 'Status'
+},
+yaxis: {
+title: 'Count',
+range: [0, 4]
+}
+};
+
+Plotly.newPlot('chart', data, layout);
+</script></body>
+</html>
+
+
+
+
+
+
+
